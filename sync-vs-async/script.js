@@ -34,16 +34,20 @@ const name = "Tausif" // sync code
 const fun2 = async() => {
     // Try catch for error handling 
 try {
-    const response = await fetch("https://dummyjson.com/test") 
+    const response = await fetch("https://jsonplaceholder.typicode.com/todos/1") 
     const data = response.json()
-    console.log("Data :",data);
+    return data
 } catch (error) {
    console.log("Error :",error);
    throw new Error("Error while fetching data")
-    
 }
+}
+// const result = fun2()
+// console.log("Result :",result);
+
 
 
 // one more thing about async function that it isn't executed by js main
 // thread cause if it's executed by main thread then the website/app will 
-// be freeze not work if promise takes too much time to resolve A thread is created for executing it 
+// be freeze not work if promise takes too much time to resolve A thread is 
+// created for executing it
