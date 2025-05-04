@@ -1,0 +1,9 @@
+{
+  "name": "Tausif",
+  "age": 41,
+  "class": "2nd",
+  "contacts": {
+    "email": "hello@gmail.com"
+  },
+  "hobbies": ["Swimming", "Chess"]
+}
