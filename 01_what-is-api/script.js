@@ -12,6 +12,9 @@
 // 1. even keys can be written in quotes and value same as js objects(if num then num)
 // if you use ,(comma) then write another key and value
 
+//file extension is .json and here is how it
+
+
 // WHy ?
 // 1. For storing data
 // 2. Transmitting data from server to client to server

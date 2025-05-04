@@ -12,8 +12,8 @@ const input = document.querySelector("#username")
 input.addEventListener('input', (event) => {
     console.log('input event fired');
     console.log(event);
-   const tar = event.target
-   console.log("tar: jj", tar.value);
+   const target = event.target
+   console.log("target :", target.value);
    
    
     
