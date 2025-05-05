@@ -26,8 +26,14 @@ const a1 = new Promise((resolve , reject ) => {
 })
 
 
-// there is better way to handle promise: by then
-// then method takes params nameed as  res / reslove whatever you want to name it 
+// there is better way to handle( promsie , reject) promise:
+//  by then method use for resolving promise
+// catch method is for catching catching erros then throw the error 
+// by rejecting promise 
+
+
+// then method is is promise object's method that  takes params
+//  nameed as  res / reslove whatever you want to name it 
 // basically it's promiseResult data( handles successful resolution)
 // but why did we use callback ?  callback ensures that the code inside it 
 // executes only when the promise settles. 
