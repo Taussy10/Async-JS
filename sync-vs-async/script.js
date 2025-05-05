@@ -13,7 +13,8 @@
 const name = "Tausif" // sync code 
 
 
-// Async Code: Won't execute line by line 
+// Async Code: COde that doesn't execute line by line 
+// cause they may take time for example API call , setTimeout , setInterval 
 // Example: will execute after 5 seconds then 
 
 setTimeout(() => {
@@ -53,6 +54,12 @@ setTimeout(() => {
 // then it will execute and
 const time = "Time"
 
+// SO this Asynchronous code of js is called 
+// AJAX code: Async javascript and XML(cause it is used to send 
+// data once time but now in JSON)
+
+//Benefit of AJAX Without reloading browser(Moblie) data will be get casue it is done by web APIS
+
 // I've question
 // Firstly browser is written in C++ so C++ 
 // web apis and other things also written in C++ right ? Yeah
@@ -74,18 +81,18 @@ const time = "Time"
 //  has multi threaded support engine
 
 // Now think Think of a scenerio
-// if it's need to take time to execute then it will take time
-// What if we work with diff server: they can do things   
+// What if we work with diff server: they can do    
 // Question1: what if they send data late ?
 // Question2: what if they don't send data basically show error ?
 
 // For first 
 // 1. using async await keyword for waiting to data come  
 // btw await means to wait 
-// If data didn't sent the it will keep waiting 
+// If data didn't sent then it will keep waiting 
 
 // 2. by using async await keyword it returns promises
-// (Vada that data will be send it may take time but will be send)
+// (that data will be send.
+//  it may take time but will be sent)
 
 // // by default these promises are fullfilled
 // then how to reject the promise
