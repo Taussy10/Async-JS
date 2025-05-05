@@ -16,22 +16,23 @@ const a = new Promise(() => {})
 
 
 
-//  you can reslove or reject the promise pending 
-// by passing params resolve and reject then call if you want to
-//  resolve call if you want to reject
+//  you can reslove or reject the promise pending by defalt or it's taking 
+// too much time to get data
+// we stored promise in a1 variable
 const a1 = new Promise((resolve , reject ) => {
-    resolve("resolve hai bhai")
+    // resolve("resolve hai bhai")
     // reject("reject hai bhai")
  
 })
 
 
+// there is better way to handle promise: by then
 // then method takes params nameed as  res / reslove whatever you want to name it 
 // basically it's promiseResult data( handles successful resolution)
 // but why did we use callback ?  callback ensures that the code inside it 
 // executes only when the promise settles. 
 a1.then((reslove)=> {
-   console.log("resolve :", reslove);
+   console.log("resolve hai bhai then method :", reslove);
    
     
 }).catch((error) =>{
@@ -57,12 +58,25 @@ a1.then((reslove)=> {
 
 
 
-// 2nd method to create promise 
-// it will always fullfilled/resolved
-// to reject it throw new Error("error")
+// 3rd method 
+// 1. To create promise 
+// 2. to resolve promise or reject promise  
  
+// to create promise use async keyword on function
+// it will be always fullfilled by default
+
 const b = async() => {
-   await  console.log("hel");
+    // await is use for resolving promise
+    const response = await fetch("https://jsonplaceholder.typicode.com/todos/1") 
+    const data = response.json()
+    console.log("Data :",data);
+    
+    // Now if you want to reject promise in case
+    // Btw this is not ideal method cause firstly 
+    // it will resolve promise then reject: if 
+    // you want to try galat url daal de then only reject hoga 
+     
+    // so wrap them in try catch block like in c function
     throw new Error("error")
 }
 
@@ -70,13 +84,17 @@ const b = async() => {
 // professional way of writing code
 // if promise fullfilled the execute try block else execute catch block
 // and reject the promise
+
 const c = async() => {
     try {
-        await  console.log("hel");
+          
+    const response = await fetch("https://jsonplaceholder.typicode.com/todos/1") 
+    const data = response.json()
+    console.log("Data :",data);
 
     } catch (error) {
-            throw new Error("error")
-
+        throw new Error("error")
     }
+  
+    
 }
-c()
